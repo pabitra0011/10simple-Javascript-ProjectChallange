@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
+
+/* ....  global styling..................     */
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Handjet', cursive;
+font-family: 'Inconsolata', monospace;
+
+    /* font-size: 1rem; */
+    font-weight: bolder;
+}
+
+body{
+  background-color: var(black,pink);
+
+}
+
+button{
+  padding: 1rem 1rem;
+  cursor: pointer;
+  border: transparent;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.btns:hover{
+    background-color: rgb(255, 190, 190);
+}
+#equal:hover{
+    background-color: rgb(141, 73, 79);
+}
+
+#all-clear:hover{
+    background-color: rgb(250, 64, 64);
+}
+#delete:hover{
+    background-color: rgb(238, 98, 98);
+}
+.extra:hover{
+    background-color: rgb(149, 236, 18);
+}
+
+.numbers:hover{
+    background-color: rgb(6, 158, 6);
+}
+
+
+
+
+  /* project styling ,,,.............................. */
+
+header h1{
+    text-align: center;
+    color: red;
+    /* margin: 20px 0; */
+    padding: 20px 0;
+    background-color: beige;
+}
+
+
+  .calculator-container{
+   margin: auto;
+    max-width: 30%;
+  height: auto;
+  background-color: aliceblue;
+  /* border: 1px solid red; */
+  border-radius: 10px;
+   margin-top: 3rem;
+   box-shadow: 56px 23px 38px rgb(201, 199, 199);
+   transition: 0.7s;
+  }
+  .calculator-container:hover{
+   box-shadow: none;
+  }
+ .output-section{
+    background-color: rgb(241, 190, 190);
+    border-radius: 10px;
+    padding: 2rem 0;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 1.5rem;
+    padding: 10px;
+    gap: 10px ;
+   
+
+ }
+ 
+ .keys-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2px;
+    row-gap: 2px;
+    padding: 5px;
+ }
+
+ /* media query for mediam decive.......   ...........    */
+ @media only screen and (max-width: 1100px) {
+    body {
+    /* background-color: rgb(231, 53, 106); */
+    }
+
+    .calculator-container{
+        max-width: 40%;
+    }
+    }
+
+
+ 
+ @media only screen and (max-width: 600px) {
+    body {
+    /* background-color: rgb(231, 53, 106); */
+    }
+
+    .calculator-container{
+        max-width: 70%;
+    }
+    }
+
+    /* media query for movile devices..........   */
+
+.prev-output-section{
+color: rgb(156, 51, 241);
+/* background-color: red; */
+/* padding-top: 20px; */
+font-size: 1.8rem;
+
+}
+.current-output-section{
+    color: rgb(179, 48, 48);
+   font-size: 2rem;
+}
