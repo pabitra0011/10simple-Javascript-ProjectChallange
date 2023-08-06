@@ -1,261 +1,150 @@
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    background-image: url('White-wallpaper-with-dots.jpg');
-    background-size: cover;
-    /* background-repeat: no-repeat; */
-    /* width: 100%;
-    height: 100%; */
-    
-    
-}
+// butttons variables .. ............................................
+ const AddBtn = document.querySelector(".add-btn");
+ const DeleteBtns = document.querySelectorAll(".delete-icon");
+ const EditBtn = document.querySelectorAll(".edit-icon");
+ const AllClear = document.querySelector(".clr-btn");
 
+ const Alert = document.querySelector(".alert");
 
-.btn{
-    padding: 0.5rem 1.4rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    background-color: rgb(68, 184, 15);
-}
-
-.alert{
-    text-align: center;
-    font-size: 1.4rem;
-    /* border-radius: 20px; */
-    /* width: 50%; */
-    /* margin-bottom: 1rem; */
-    /* color: rgb(114, 112, 112); */
-    /* border: 1px solid red; */
-    height: 2rem;
-}
-.show-warning{
-    background-color: rgb(255, 132, 132);
-}
-.show-sucess{
-    color: white;
-    background-color: rgb(211, 255, 211);
-}
+// console.log(DeleteBtns)
+//   task list variabless.. 
+ const TaskList = document.querySelector(".task-list");
+ const inputTxt = document.getElementById("text-input");
+  const taskContain = document.querySelectorAll(".task-container");
 
 
-/* ======================== project style ====================== */
-.profile{
-    position: absolute;
-    top: 5%;
-    left: 7%;
-    font-size: 1.5rem;
-    color: blue;
-    text-decoration: none;
-}
-.profile-hide{
-    display: none;
-}
+ let rowId = 0;
 
-
-
-
-header{
-    /* display: flex;
-    justify-content: space-evenly; */
-    text-align: center;
-    font-size: 2rem;
-    border: 1px solid red;
-    padding: 1rem 0;
-    margin-bottom: 3rem;
-    background-color: rgb(174, 255, 255);
-}
-
-.container{
-    /* border: 1px solid red; */
-    /* display: inline-block; */
-    width: 50%;
-    /* max-width: 1100px; */
-    margin: auto;
-    padding: 2rem 1rem; 
-    background-color: rgb(225, 253, 253);
-    border-radius: 20px;
-    box-shadow: rgba(90, 243, 248, 0.2) 0px 7px 29px 0px;
-   margin-top: 2rem;
-}
-
-
-.container-add{
-    border: 1px solid black;
-    padding: 1rem 1rem;
-    border-radius: 10px;
-    background-color: rgb(197, 255, 197);
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-.container-add p{
-    color: green;
-    font-weight: bolder;
-}
-.add-btn{ 
-  padding: 0.7rem 2.5rem;
-  font-size: 1.2rem;
-  color: white;
-}
-.task-input{
-    margin: 0 1rem 0 0;
-    width: 70%;
-    height: 2rem;
-    /* padding: 0.5rem 2rem; */
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    padding-left: 0.4rem;
-}
- 
-/* adding responsiven......... to add task section........ */
-
-@media only screen and (max-width: 600px) {
-    body {
-    background-color: rgb(248, 253, 255);
-    }
-    .container{
-        width: 100%;
-    }
-    .task-input{
-      margin: 0;
-      width: 100%;
-      margin-bottom: 1rem;
-      height: 3rem;
-    }
-    .profile{
-        top: 16%;
-        left: 25%;
-    }
-
-
-    }
-    /* tablet view........   */
-    @media only screen and (min-width:600px) and (max-width: 1000px) {
-        body {
-        /* background-color: lightblue; */
-        }
-        .container{
-            width: 80%;
-        }
-        .task-input{
-            /* margin: 0; */
-            /* width: 100%; */
-            margin-bottom: 1rem;
-            height: 3rem;
-          }
-        
-        }
-
-
-        /* task list section.................................  /..... */
- /* ========================================================================================================================================= */
-.tasklist-heading{
-
-    color: green;
-    text-align: center;
-     text-decoration: underline;
-     
-    font-size: 1.4rem;
-    padding: 1rem 0 0 0;
-}
-.task-list{
- background-color: aliceblue;
- margin-top: 2rem;
- padding: 0.4rem 0.7rem;
-}
-
-.task-container{
- border: 1px solid rgb(153, 153, 250);
- border-radius: 10px;
- display: flex;
- justify-content: space-between;
-  padding: 0.3rem 0.5rem;
-  box-shadow: rgba(8, 114, 253, 0.35) 0px 5px 15px;
-  margin-bottom: 1rem;
-}
-.task-container-hide{
-    display: none;
-}
-
-.task-content{
-    display: flex;
-    justify-content: space-between;
-    /* margin-left: 0.3rem; */
-}
-.task-content p{
-    margin-left: 0.5rem;
-    font-size: 1.4rem;
-    /* font-family: 'Handjet', cursive; */
-    font-family: 'Inconsolata', monospace;
-    color: rgb(71, 71, 71);
-}
-.icons{
-    /* border: 1px solid red; */
-    display: flex;
-    gap: 0.3rem;
-
-}
-.delete-icon{
-    color: red;
-    cursor: pointer;
-}
-.edit-icon{
-    color: green;
-    cursor: pointer;
-}
-
-.clr-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem auto;
-     padding: 0.3rem 2rem;
-     border: none;
-    background-color: rgb(255, 175, 175);
-  border-radius: 10px;
-   cursor: pointer;
-}
-.clr-btn:hover{
-    background-color: rgb(253, 98, 98);
-    color: white;
-}
-
-
-/* adding responsiven......... to add task section........ */
-
-@media only screen and (max-width: 600px) {
    
-    .task-container{
-        width: 100%;
-        
-    }
-    .task-content p{
-        font-size: 1rem;
+
+//  ============= funcitons ==========================================
+// =================================================================
+
+// function for creating new task element...................
+function createElement( ){
+
+    const ipVal = inputTxt.value
+    let element = document.createElement('article');
+    //  element.id = id;
+    //  element.className = "task-container";
+     element.classList.add("task-container");
+    //  console.log(element)
+    
+     element.innerHTML = `  <div class="task-content">
+     <input onClick="completedTask(this)" type="checkbox" value="check">
+       <p> ${ipVal} </p>
+      </div>
+     <div class="icons">
+     <span onClick="editPost(this)" class=" edit-icon material-symbols-outlined">
+         border_color
+       </span>
+        <span onClick="deletePost(this)" class=" delete-icon material-symbols-outlined">
+         delete
+      </span>
+       </div> `;
+    if(ipVal === ""){
+        warningAlert("Please Enter a Value 🤦‍♂️🤦‍♀️!");
+        return ;
     }
 
+
+   TaskList.appendChild(element);
+   if(AddBtn.textContent === "Add"){
+    successAlert("Task Added Sucessfully 😍!")
+   }else{
+    successAlert("Task Edited Success!😎")
+   }
+   
+   inputTxt.value = "";
+   AddBtn.textContent = "Add"
+}
+
+// function for delete elements.................................
+// IN: - I use this button eventlistener on button where element is created...
+let deletePost = (e) => {
+    if(confirm("Are you Sure about it!!!") === false){
+        return ;
     }
-    /* tablet view........   */
-    @media only screen and (min-width:600px) and (max-width: 1000px) {
-       
-        
-        
-        }
+    else{
+        e.parentElement.parentElement.remove();
+        warningAlert("Task Deleted sucessfully⛔")
+    }
+    
+  }
+
+//  edit function. ......... ............. ..................
+// IN: - I use this button eventlistener on button where element is created...
+let editPost = (e) => {
+    // console.log(e.parentElement.previousElementSibling.lastElementChild.innerHTML);
+    inputTxt.value = e.parentElement.previousElementSibling.lastElementChild.innerHTML;
+    AddBtn.innerHTML ="Edit";
+    e.parentElement.parentElement.remove();
+  };
 
 
- /* use for javascript. . .... */
- .complete{
-    background-color: rgb(175, 247, 175);
-    box-shadow: 1px 1px 6px inset red;
+
+//  functions for completed task..........................
+ 
+ let completedTask = (e) =>{
+    // console.log(e.parentElement.parentElement.add("complete"));
+    e.parentElement.parentElement.classList.toggle("complete");
+    e.parentElement.classList.toggle("txt-line");
+    // console.log(e.parentElement.classList.contains("txt-line"));
+    if(e.parentElement.classList.contains("txt-line") === true){
+        successAlert("Hurry! You complete your task!🎉")
+    }
+   
  }
- .txt-line{
-    text-decoration: underline;
-    text-decoration-line: line-through;
-    text-decoration-color: red;
+
+//   clear all function.. .....................................
+//  let clearall = (e) =>{
+    
+//  }
+ 
+ AllClear.addEventListener('click', (e) =>{
+  //  console.log(e.currentTarget.previousElementSibling)
+  let val = e.currentTarget.previousElementSibling.innerHTML;
+  if(val === ""){
+    warningAlert("there is nothis in the list!")
+  }
+  else{
+    e.currentTarget.previousElementSibling.innerHTML = "";
+     successAlert("all tasks Clear sucessfully!");
+  } 
+ })
+
+
+
+// aleart functions.................................
+ 
+ function successAlert(txt){
+    Alert.textContent = txt;
+    Alert.style.color = "green";
+    setTimeout(function(){
+    Alert.textContent = "";
+    } ,1500)
  }
+ function warningAlert(txt){
+    Alert.textContent = txt;
+    Alert.style.color = "red";
+    setTimeout(function(){
+    Alert.textContent = "";
+    } ,2000)
+ }
+
+// ==============================   Add Event Listener ====================================================================
+ 
+// add button.............
+AddBtn.addEventListener('click', createElement);
+
+
+// some fun with it .. ...............
+const profile = document.querySelector(".profile");
+
+setInterval(setprofile,1000);
+function setprofile(){
+    profile.classList.toggle("profile-hide")
+}
