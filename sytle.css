@@ -1,5 +1,7 @@
 
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -13,12 +15,6 @@ body{
   
 }
 
-#greeting{
-    padding: 1rem 0;
-    font-size: 1.4rem;
-    color: red;
-    text-align: center;
-}
 
 header{
     display: flex;
@@ -31,7 +27,7 @@ header{
 }
 .uil-github{
     color: black;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     /* padding-left: 10rem; */
     cursor: pointer;
 
@@ -45,12 +41,20 @@ header{
     padding: 2rem 0;
     font-size: 1rem;
     background-color: aliceblue;
+    
 }
 .about p{
     font-size: 1.2rem;
     width: 50%;
     margin: auto;
 }
+.gitrepo{
+    text-align: center;
+    font-size: 1.3rem;
+    color: blue;
+    padding: 1rem 0;
+}
+
 
 
 .project-container{
@@ -68,10 +72,14 @@ header{
     margin-top: 2rem;
 }
 .project{
-   max-width: 30%;
+   max-width: 400px;
   border: 2px solid rgb(218, 62, 0);
   border-radius: 10px;
-  box-shadow: 4px 5px 3px rgb(235, 195, 195);
+  box-shadow: 10px 10px 13px 12px rgb(235, 195, 195);
+}
+.project:hover{
+    box-shadow: none;
+    transition: 0.8s;
 }
 .project-image{
     width: 100%;
@@ -109,6 +117,9 @@ header{
     .project{
       max-width: 80%;
     }
+    .about p{
+        width: 80%;
+    }
  }
 
 
@@ -139,27 +150,39 @@ li {
 .footer-links{
  font-size: 1.2rem;
 }
+.footer-links h3{
+    color: rgb(231, 47, 23);
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+.footer-links li{
+    margin-bottom: 0.7rem;
+}
 .footer-links li a{
   text-decoration: none;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 2rem; */
   color: rgb(82, 79, 79);
 }
-.footer-icons{
-
+.footer-links li a:hover{
+    color: blue;
+}
+.footer-icons h3{
+   color: rgb(230, 25, 25);
+   text-decoration: underline;
 }
  .uil-linkedin{
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: rgb(81, 2, 155);
 }
 .uil-twitter{
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .uil-envelope-edit{
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 12rem;
     color: red;
 }
 .footer-last{
@@ -171,12 +194,14 @@ li {
     color: rgb(204, 11, 11);
 }
 
-#greeting{
-border: 1px solid rgb(230, 135, 135);
-box-shadow: 19px 2px 25px rgb(71, 113, 250);
-color: rgb(138, 78, 91);
-text-shadow: 7px 5px 9px rgb(255, 18, 18);
-}
+    #greeting{
+        color: blue;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+
 
 
 /* add responsiveness. .......... */
@@ -184,5 +209,7 @@ text-shadow: 7px 5px 9px rgb(255, 18, 18);
     
     .footer-container{
         flex-direction: column;
+        row-gap: 2rem;
     }
+
  }
