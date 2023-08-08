@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,8 @@
     
  <div class="about">
     <h3>about</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, veniam.</p>
+    <p>This is a simple Quize application, which consists several generl knoledge questions , you need to answer this qustions and a cirtificate with your name and score are appere when quize completed.</p>
+    <a href="https://github.com/pabitra0011/10simple-Javascript-ProjectChallange/tree/main"><i class="uil uil-github"></i></a>
  </div>
 
 <!-- main section ......... ................... -->
@@ -35,7 +37,7 @@
         <i class="uil uil-medal"></i>
         <div class="score">
             <p class="live-score">Live Score</p>
-            <h3>555</h3>
+            <h3 class="current-score">0</h3>
         </div>
         </div>
        <div class="time-board">
@@ -56,7 +58,7 @@
             <h2>User == </h2>
             <p class="user-name"> Name0011</p>
         </div>
-        <p class="display-massage">This is a massage to user1,</p>
+        <p class="display-massage"></p>
         <!-- question container.... .  -->
         <!-- questions structure ........................... -->
         <div class="question-section">
@@ -98,12 +100,53 @@
 
   </section>
 
- <!-- //start button to open question ... -->
+ <!-- //start button to open question ........................ -->
+
   <div class="start-section ">
-     <h1 class="start-username">Welcome!</h1>
-     <h3>Best of luck for your Quiz!</h3>
+     <h1 class="start-username"></h1>
+     <h3>Instructions:</h3>
+     <!-- <ol class="instructions"> -->
+      <li>Please don't select multiple answers.</li>
+       <li>click next button for submitting and get next questions.</li>
+       <li>when all questions are completed it will autometaclly generate score + cirtificate.</li>
+     <!-- </ol> -->
+     <form class="entry-form" action=""> 
+      <input id="nam" class="collect-name" type="text" value="" placeholder="Enter you name here to processed.">
+      <button class="name-btn">Submit</button>
+     </form>
      <button class="start-btn">Start Quiz &#x2192;</button>
   </div>
+
+
+ <!-- when quiz complete this section will appere ...................... -->
+   
+   <div class="complete complete-hide">
+    <div class="cirtificate">
+     <h1>CERTIFICATE</h1>
+     <h2>Of Excellence</h2>
+     <h4 class="cirtificate-id">number</h4>
+     <hr>
+     <i class="uil uil-medal"></i>
+     <p>This Certificate Is Proudly Presented To </p>
+     <h3 class="cirtificate-name">username</h3>
+     <p>For Completing Anual Quiz comptition, with score <span class="cirtificate-score">90%</span>, <span class="cirtificate-userchar">You are a genious according to score.</span></p>
+     <div class="flex ">
+      <h3 class="current-date">08/08/2023</h3>
+      i
+      <h3 class="signature">pabitrapal</h3>
+     </div>
+    </div>
+     <!-- download button .  -->
+      <div class="cirtificate-btns">
+        <button class="cancel-btn">Cancel</button>
+        <button class="download-btn">Download</button>
+      </div>
+   </div>
+   
+  
+
+
+
 
 
 
@@ -120,3 +163,6 @@
 
 </body>
 </html>
+
+
+
