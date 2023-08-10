@@ -122,15 +122,88 @@ header{
     }
  }
 
+/* Future projects section.........................................................................*/
+.future-projects{
+    display: flex;
+    flex-wrap: wrap;
+   gap: 1rem;
+   border: 1px solid rgb(230, 178, 194);
+   margin: 3rem 0;
+   text-align: center;
+   padding: 1rem 0;
+ }
+ .future-projects h3{
+    font-size: 1.3rem;
+ }
+ 
+ .ongoing-projects{
+    display: flex;
+    flex-wrap: wrap;
+   gap: 1rem;
+   border: 2px solid rgb(199, 230, 199);
+   margin: 3rem 0;
+   padding: 1rem 0;
+ }
+ .ongoing-projects h3{
+    font-size: 1.3rem;
+ }
+
+
+ /* .... update section ................................ */
+
+
+  .update-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: azure;
+  }
+  .upcoming-update{
+   padding: 1rem 0.7rem;
+   border-bottom: 1px solid rgb(236, 199, 199);
+  }
+  .upcoming-update h2{
+    color: red;
+    border-bottom: 1px solid red;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  .upcoming-update p{
+    font-family: cursive;;
+    padding-bottom: 0.3rem;
+  }
+  .upcoming-update span{
+   color: red; 
+  }
+  
+  .past-update{
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid rgb(190, 202, 240);
+  }
+  .past-update h2{
+    color: blueviolet;
+    border-bottom: 1px solid blueviolet;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  .past-update span{
+    color: rgb(3, 124, 13);
+  }
+  .past-update p{
+    padding-bottom: 0.3rem;
+    font-family: cursive;
+  }
 
 
 
-/* footer section . ............................. */
+/* footer section . ............................................. */
  
 footer{
     background-color: rgb(203, 179, 226);
     margin-top: 3rem;
-   
+    box-shadow: 
+    inset 0px 19px 18px -1px #de61f7,
+    inset 0px -11px 18px -10px #db0808;
 }
 .footer-container{
   display: flex;
