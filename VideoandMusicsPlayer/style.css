@@ -1,0 +1,257 @@
+
+/* global styles ............................ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.btn{
+    background-color: aquamarine;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(236, 152, 236);
+    transition: 0.8s;
+}
+.hr1{
+    width: 50vw;
+    margin: auto;
+    height: 3px;
+    background-color: red;
+} 
+.video-btn{
+    background-color: grey;
+    cursor: no-drop;
+}
+.video-btn:hover{
+    background-color: grey;
+}
+
+/* ============================================ */
+/* projects styles . ..............................*
+
+/* header seciton .............................................. */
+
+header{
+    text-align: center;
+    /* color: ; */
+    padding: 1rem 0;
+    background-color: aqua;
+}
+.imageSlid-container{
+    border: 1px solid red;
+    margin-bottom: 1rem;
+    height: 10vh;
+}
+.slide-img{
+    width: 100%;
+    height: 10vh;
+}
+
+
+/* audio video section ............................... */
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+
+.container{
+   background-color: rgb(228, 252, 201);
+    width: 90vw;
+    height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 1.6rem;
+  column-gap: 1.8rem;
+  margin: 3rem auto;
+  padding: 1rem 0;
+  border-radius: 20px;
+}
+
+.audio{
+  background-color: rgb(247, 203, 248);
+  word-wrap: break-word;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  /* width: 10vw; */
+  border-radius: 20px;
+  cursor: pointer;
+}
+.audio:hover{
+    opacity: 0.5;
+    transition: 0.7s;
+}
+.audio-image{
+ width: 106px;
+ border-radius: 20px;
+}
+.audio-title{
+    color: red;
+    /* padding: 0.4rem 0.3rem ; */
+    padding:0 0.8rem;
+    width: min-content;
+}
+
+
+/* Media query for mobile devices====================== ====================================*/
+@media (max-width:600px) {
+    
+    .container{
+        width: 100vw;
+    }
+    .audio{
+        width: 90vw;
+    }
+    .audio-title{
+        width: auto;
+    }
+    .audio-image{
+        width: 80px;
+    }
+    .hr1{
+        width: 100%;
+    }
+}
+
+/* Media query for tablet device========================== */
+@media (min-width:601px) {
+     .audio{
+        width: 40%;
+     }
+     .audio-title{
+        width: fit-content;
+     }
+}
+
+
+
+
+/* player section ..======================================================*
+ /* <!-- full page audio player . ..................... --> */
+  
+ .audio-player-section{
+    background-image: url(1472764.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 100vh;
+    display: none;
+ }
+.player-container{
+    margin: auto;
+    color: white;
+    width: fit-content;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    background-color: rgb(31, 10, 71);
+}
+.cut-btn{
+    display: block;
+    padding: 0.5rem;
+    margin: auto;
+    cursor: pointer;
+    background-color: red;
+}
+.player-container img{
+    border: 1px solid black;
+    width: fit-content;
+    height: 250px;
+    border-radius: 20px;
+}
+.player-container-title{
+   text-align: center;
+   padding: 1rem 0 0.5rem 0;
+}
+.player-container-author{
+   text-align: center;
+   padding-bottom: 2rem;
+}
+.audio-player-btns{
+    /* padding: 0.5rem 0; */
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    border-radius: 30px;
+}
+.uil{
+    cursor: pointer;
+    color: brown;
+}
+
+
+
+audio{
+    /* width: 37vw; */
+    width: 439px;
+}
+audio::-webkit-media-controls-panel{
+    background-color: aquamarine;
+}
+audio::-webkit-media-controls-play-button{
+   background-color: rgb(131, 197, 241);
+   border-radius: 50%;
+}
+audio::-webkit-media-controls-current-time-display{
+    color:rgb(24, 71, 228);
+}
+audio::-webkit-media-controls-time-remaining-display{
+    color: rgb(243, 66, 66);
+}
+audio::-webkit-media-controls-timeline{
+  border-radius: 20px;
+  background-color: rgb(157, 211, 243);
+}
+
+/* ====================================================media query for mobile devices..... */
+
+@media (max-width:500px) {
+    .audio-player-section{
+        max-width: 100vw;
+        height: 100vh;
+     }
+    .player-container{
+       
+    }
+    .player-container img{
+        max-width: 90vw;
+    }
+    .player-container-title{
+       
+    }
+    .player-container-author{
+       
+    }
+    .audio-player-btns{
+        justify-content: center;
+    }
+
+    audio{
+     width: 300px;
+    }
+}
