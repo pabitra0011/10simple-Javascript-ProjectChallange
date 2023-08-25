@@ -62,8 +62,9 @@ header{
     flex-wrap: wrap;
     background-color: darkblue;
     justify-content: center;
+    padding: 5vh 0;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 .project-container-heading{
     text-align: center;
@@ -74,9 +75,9 @@ header{
 }
 .project{
    max-width: 400px;
-  border: 2px solid rgb(218, 62, 0);
+  border: 2px solid #88cee1;
   border-radius: 10px;
-  box-shadow: 10px 10px 13px 12px rgb(235, 195, 195);
+  box-shadow: 9px 9px 23px 8px #bfe1ff;
 }
 .project:hover{
     box-shadow: none;
@@ -85,6 +86,9 @@ header{
 .project-image{
     width: 100%;
     border: none;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+
 }
 .project-title{
    color: red;
@@ -101,6 +105,10 @@ header{
 }
 .links a{
     text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 3px 6px;
 }
 
 /* media query for mobile view ............................... */
